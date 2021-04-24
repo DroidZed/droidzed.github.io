@@ -1,52 +1,50 @@
+import { faReddit, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Head from 'next/head'
+import React from 'react'
 import styles from '../styles/Home.module.css'
 
 export default function Home(): JSX.Element {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>● Sanctuary ●</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Aymen Dhahri" />
+        <meta name="description" content="Personal website" />
+        <meta name="keywords" content="website,personal" />
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          DroidZed's <a href="https://nextjs.org">Next.js site!</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          The future version of my{' '}
+          <code className={styles.code}>Sanctuary</code>
+          {' '} but with a little extra spice !
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className={styles.card}>
+            <a target="_blank" href="https://www.twitter.com/Droid7ed" >
+              <h3>Twitter &rarr;</h3>
+              <p> Find me on twitter.
+            <FontAwesomeIcon icon={faTwitter} className="text-xs" />
+              </p>
+            </a>
+          </div>
+          <div className={styles.card}>
+            <a target="_blank" href="https://reddit.com/u/DroidZed">
+              <h3>u/DroidZed &rarr;</h3>
+              <p> Find me on reddit.
+              <FontAwesomeIcon icon={faReddit} size="1x" />
+              </p>
+            </a>
+          </div>
         </div>
       </main>
 

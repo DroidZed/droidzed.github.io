@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
-import Footer from '../components/Footer';
 import Description from '../components/Description';
 import Grid from '../components/Grid';
 import HeadTag from '../components/HeadTag';
@@ -17,10 +16,6 @@ function Home() {
 				<Title />
 				<Description />
 				<Grid />
-				<Link href='/about'>
-					<a>About page !</a>
-				</Link>
-				<Footer />
 			</div>
 		</div>
 	);

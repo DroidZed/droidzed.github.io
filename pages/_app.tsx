@@ -1,7 +1,13 @@
-import 'tailwindcss/tailwind.css'
+import '../styles/globals.css';
 
-function App({ Component, pageProps }: { Component: any, pageProps: any }): JSX.Element {
-  return <Component {...pageProps} />
+function App({
+	Component,
+	pageProps,
+}: {
+	Component: any;
+	pageProps: any;
+}): JSX.Element {
+	return <Component {...pageProps} />;
 }
 
-export default App
+export default App;

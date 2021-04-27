@@ -1,17 +1,16 @@
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import React from 'react';
-
-interface Props {
-	title: string;
-	icon: IconDefinition;
-	href: string;
-}
+import { Props } from './Props';
 
 const Card: React.FC<Props> = (props) => {
 	return (
-		<div className='card'>
+		<div
+			className={
+				props.cardType == 'About'
+					? 'card goldenDarkShadow dark:goldenBoxShadow'
+					: 'card blueBoxShadow'
+			}>
 			<Link href={props.href}>
 				<a>
 					<div className='grid place-items-center'>

@@ -11,6 +11,12 @@
 		.code-dark {
 			color: #000;
 		}
+		.goldenDarkShadow:focus,
+		.goldenDarkShadow:active,
+		.goldenDarkShadow:hover {
+			color: #e6c200;
+			box-shadow: rgba(230, 194, 0, 0.2) 0px 7px 29px 0px;
+		}
 	}
 
 	.top-container {
@@ -87,13 +93,6 @@
 		transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 	}
 
-	.card:hover,
-	.card:focus,
-	.card:active {
-		color: #0070f3;
-		box-shadow: rgba(6, 128, 220, 1) 0px 7px 29px 0px;
-	}
-
 	.card h3 {
 		margin: 0 0 1rem 0;
 		font-size: 1.5rem;
@@ -107,6 +106,27 @@
 
 	.logo {
 		height: 1em;
+	}
+
+	.blueBoxShadow:hover,
+	.blueBoxShadow:active,
+	.blueBoxShadow:focus {
+		color: #0070f3;
+		box-shadow: rgba(6, 128, 220, 0.2) 0px 7px 29px 0px;
+	}
+
+	.orangeBoxShadow:hover,
+	.orangeBoxShadow:active,
+	.orangeBoxShadow:focus {
+		color: #ff4500;
+		box-shadow: rgba(255, 69, 0, 0.2) 0px 7px 29px 0px;
+	}
+
+	.goldenBoxShadow:hover,
+	.goldenBoxShadow:active,
+	.goldenBoxShadow:focus {
+		color: #ffd700;
+		box-shadow: rgba(255, 215, 0, 0.2) 0px 7px 29px 0px;
 	}
 
 	@media (max-width: 600px) {

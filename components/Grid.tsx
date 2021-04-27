@@ -11,13 +11,15 @@ const Grid: React.FC = () => {
 				title='Twitter'
 				href='https://www.twitter.com/Droid7ed'
 				icon={faTwitter}
+				cardType='Twitter'
 			/>
 			<ExternalLinkCard
 				title='u/DroidZed'
 				href='https://reddit.com/u/DroidZed'
 				icon={faReddit}
+				cardType='Reddit'
 			/>
-			<Card title='About' href='/about' icon={faInfoCircle} />
+			<Card title='About' cardType='About' href='/about' icon={faInfoCircle} />
 		</div>
 	);
 };

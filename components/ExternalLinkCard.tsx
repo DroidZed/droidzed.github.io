@@ -1,16 +1,16 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-
-interface Props {
-	title: string;
-	icon: IconDefinition;
-	href: string;
-}
+import { Props } from './Props';
 
 const ExternalLinkCard: React.FC<Props> = (props) => {
 	return (
-		<div className='card'>
+		<div
+			id={props.cardType}
+			className={
+				props.cardType == 'Reddit'
+					? 'card orangeBoxShadow'
+					: 'card blueBoxShadow'
+			}>
 			<a target='_blank' href={props.href}>
 				<div className='grid place-items-center'>
 					<div>{props.title}</div>

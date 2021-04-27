@@ -1,10 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
 
-const HeadTag: React.FC = () => {
+interface Props {
+	title?: string;
+}
+
+const HeadTag: React.FC<Props> = (props) => {
 	return (
 		<Head>
-			<title>● Sanctuary ●</title>
+			<title>● Sanctuary ●{` | ${props.title}`}</title>
 			<meta
 				name='viewport'
 				content='width=device-width, initial-scale=1, shrink-to-fit=no'

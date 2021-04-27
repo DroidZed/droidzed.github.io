@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react';
 
 export const initialState = {
-	theme: false,
+	theme: true,
 	handleChangeTheme: (theme: boolean) => {},
 };
 

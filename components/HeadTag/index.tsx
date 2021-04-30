@@ -23,8 +23,8 @@ const HeadTag: React.FC<Props> = (props) => {
 			<meta name='twitter:card' content='summary' />
 			<meta name='twitter:site' content='@Droid7ed' />
 			<meta name='twitter:creator' content='@Droid7ed' />
-			<meta property='og:title' content='Personal Website' />
-			<meta property='og:url' content='https://droidzed.me' />
+			<meta property='og:title' content={`𝕯𝖗𝖔𝖎𝖉𝖅𝖊𝖉'𝖘 𝕯𝖔𝖒𝖆𝖎𝖓`} />
+			<meta property='og:url' content={`https://droidzed.me${props.title}`} />
 			<meta property='og:type' content='website' />
 			<meta
 				property='og:description'
@@ -33,7 +33,7 @@ const HeadTag: React.FC<Props> = (props) => {
 			<meta property='og:image' content='http://www.droidzed.me/favicon.png' />
 			<meta
 				property='og:image:url'
-				content='http://www.droidzed.me/favicon.png'
+				content='https://www.droidzed.me/favicon.png'
 			/>
 			<meta property='og:image:alt' content='sanctuary icon' />
 			<meta property='og:image:type' content='image/png' />

@@ -24,8 +24,6 @@ export default class SiteDocument extends Document {
 					/>
 				</Head>
 				<body>
-					<Main />
-					<NextScript />
 					<noscript>
 						<iframe
 							src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -34,6 +32,8 @@ export default class SiteDocument extends Document {
 							style={{ display: 'none', visibility: 'hidden' }}
 						/>
 					</noscript>
+					<Main />
+					<NextScript />
 				</body>
 			</Html>
 		);

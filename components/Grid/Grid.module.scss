@@ -1,0 +1,13 @@
+.gridLayout {
+	display: flex;
+	justify-content: center;
+	max-width: 800px;
+	margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+	.gridLayout {
+		width: 100%;
+		flex-direction: column;
+	}
+}

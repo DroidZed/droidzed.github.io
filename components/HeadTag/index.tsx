@@ -10,6 +10,10 @@ const HeadTag: React.FC<Props> = (props) => {
 		<Head>
 			<title>● Sanctuary ●{` | ${props.title}`}</title>
 			<link rel='icon' href='/favicon.png' />
+			<meta
+				name='description'
+				content='Sanctuary of DroidZed, my personal website and portfolio. Come check it out and discover more about my world.'
+			/>
 			<meta name='keywords' content='website,personal,sanctuary' />
 			<meta name='robots' content='index, follow' />
 			<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
@@ -45,10 +49,6 @@ const HeadTag: React.FC<Props> = (props) => {
 			<meta property='og:image:type' content='image/png' />
 			<meta property='og:image:width' content='1042' />
 			<meta property='og:image:height' content='1058' />
-			<meta
-				name='description'
-				content='Sanctuary of DroidZed, my personal website and portfolio. Come check it out and discover more about my world.'
-			/>
 		</Head>
 	);
 };

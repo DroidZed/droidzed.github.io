@@ -29,7 +29,7 @@ const HeadTag: React.FC<Props> = (props) => {
 			<meta property='og:image' content='https://www.droidzed.me/favicon.png' />
 			<meta name='description' content='Personal website' />
 			<meta name='keywords' content='website,personal' />
-			<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+			<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
 			<link rel='icon' href='/favicon.png' />
 		</Head>
 	);

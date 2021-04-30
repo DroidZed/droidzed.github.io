@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AppThemeContext } from '../store/themeStore';
+import { AppThemeContext } from '../../store/themeStore';
 
 const Description: React.FC = () => {
 	const { theme, handleChangeTheme } = useContext(AppThemeContext);
@@ -12,7 +12,7 @@ const Description: React.FC = () => {
 					document.getElementById('darkBody')?.classList.toggle('dark');
 					handleChangeTheme(!theme);
 				}}
-				className='code dark:code-dark'>
+				className='code dark:text-black'>
 				Sanctuary
 			</code>{' '}
 			but with a little extra spice !

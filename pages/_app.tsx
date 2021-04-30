@@ -1,17 +1,20 @@
-import React from 'react';
-import { ThemeWrapper } from '../store/themeStore';
-import '../styles/globals.css';
+import React from "react";
+import { AppProps } from "next/app";
+import { ThemeWrapper } from "../store/themeStore";
+import "../styles/globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import GoogleTagManager from "../components/GoogleTagManager";
 
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
-function App({ Component, pageProps }: { Component: any; pageProps: any }) {
+export default function App({ Component, pageProps }: AppProps) {
+
 	return (
 		<ThemeWrapper>
-			<Component {...pageProps} />
+			<GoogleTagManager>
+				<Component {...pageProps} />
+			</GoogleTagManager>
 		</ThemeWrapper>
 	);
 }
-
-export default App;

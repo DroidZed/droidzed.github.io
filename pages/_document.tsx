@@ -11,7 +11,7 @@ export default class SiteDocument extends Document {
 
 	render() {
 		return (
-			<Html>
+			<Html dir='ltr' lang='en' prefix='og: https://ogp.me/ns#'>
 				<Head>
 					<script
 						dangerouslySetInnerHTML={{

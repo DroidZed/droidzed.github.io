@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppThemeContext } from '../../store/themeStore';
 
-import styles from './Description.module.css';
+import styles from './Description.module.scss';
 
 const Description: React.FC = () => {
 	const { theme, handleChangeTheme } = useContext(AppThemeContext);

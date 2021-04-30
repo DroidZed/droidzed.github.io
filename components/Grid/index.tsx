@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import Card from '../Card';
 
-import styles from './Grid.module.css';
+import styles from './Grid.module.scss';
 
 const Grid: React.FC = () => {
 	return (

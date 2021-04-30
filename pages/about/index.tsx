@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import HeadTag from '../components/HeadTag';
-import { AppThemeContext } from '../store/themeStore';
+import HeadTag from '../../components/HeadTag';
+import { AppThemeContext } from '../../store/themeStore';
+
+import styles from './About.module.scss';
 
 function About(): JSX.Element {
 	const { theme } = useContext(AppThemeContext);

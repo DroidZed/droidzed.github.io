@@ -24,7 +24,12 @@ const HeadTag: React.FC<Props> = (props) => {
 			<meta name='twitter:site' content='@Droid7ed' />
 			<meta name='twitter:creator' content='@Droid7ed' />
 			<meta property='og:title' content={`𝕯𝖗𝖔𝖎𝖉𝖅𝖊𝖉'𝖘 𝕯𝖔𝖒𝖆𝖎𝖓`} />
-			<meta property='og:url' content={`https://droidzed.me/${props.title}`} />
+			<meta
+				property='og:url'
+				content={`https://droidzed.me${
+					props.title != 'Home' ? '/' + props.title : ''
+				}`}
+			/>
 			<meta property='og:type' content='website' />
 			<meta
 				property='og:description'

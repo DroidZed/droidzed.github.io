@@ -37,6 +37,10 @@ const HeadTag: React.FC<Props> = (props) => {
 				content='Sanctuary of DroidZed, my personal website and portfolio. Come check it out and discover more about my world.'
 			/>
 			<meta property='og:image' content='http://www.droidzed.me/favicon.png' />
+			<meta
+				property='og:image:secure'
+				content='https://www.droidzed.me/favicon.png'
+			/>
 			<meta property='og:image:alt' content='sanctuary icon' />
 			<meta property='og:image:type' content='image/png' />
 			<meta property='og:image:width' content='1042' />

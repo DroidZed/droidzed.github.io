@@ -11,7 +11,8 @@ const Grid: React.FC = () => {
 				<Card
 					title='Twitter'
 					icon={faTwitter}
-					shadowColor='blue'
+					textColor="beautifulBlue"
+					shadowColor='beautifulBlueShadow'
 				/>
 			</a>
 			<a href="https://reddit.com/u/DroidZed" target="_blank">
@@ -19,14 +20,17 @@ const Grid: React.FC = () => {
 				<Card
 					title='u/DroidZed'
 					icon={faReddit}
-					shadowColor='orange'
+					textColor="bloodOrange"
+					shadowColor='bloodOrangeShadow'
 				/>
 			</a>
 			<Link href='/about'>
 				<a>
 					<Card title='About'
-						shadowColor='golden'
-						icon={faInfoCircle} />
+						icon={faInfoCircle}
+						textColor="goldenSun"
+						shadowColor='goldenSunShadow'
+					/>
 				</a>
 			</Link>
 		</div>

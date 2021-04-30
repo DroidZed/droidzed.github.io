@@ -2,11 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Props } from '../Props';
 
+import styles from './Card.module.css';
+
 const Card: React.FC<Props> = (props) => {
 	return (
-		<div className={`card ${props.shadowColor}Shadow`}>
+		<div className={`${styles.card} ${props.textColor} ${props.shadowColor}`}>
 			<div className='grid place-items-center'>
-				<p>{props.title}</p>
+				<p className="m-0 text-xl leading-normal">{props.title}</p>
 				<span>
 					<FontAwesomeIcon icon={props.icon} size='3x' />
 				</span>

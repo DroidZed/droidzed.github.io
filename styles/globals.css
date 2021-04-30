@@ -10,6 +10,42 @@
     }
   }
 
+  .beautifulBlueShadow:hover,
+  .beautifulBlueShadow:active,
+  .beautifulBlueShadow:focus {
+    box-shadow: rgba(6, 128, 220, 0.2) 0px 7px 29px 0px;
+  }
+
+  .bloodOrangeShadow:hover,
+  .bloodOrangeShadow:active,
+  .bloodOrangeShadow:focus {
+    box-shadow: rgba(255, 69, 0, 0.2) 0px 7px 29px 0px;
+  }
+
+  .goldenSunShadow:hover,
+  .goldenSunShadow:active,
+  .goldenSunShadow:focus {
+    box-shadow: rgba(255, 215, 0, 0.2) 0px 7px 29px 0px;
+  }
+
+  .beautifulBlue:active,
+  .beautifulBlue:focus,
+  .beautifulBlue:hover {
+    color: #0070f3;
+  }
+
+  .bloodOrange:hover,
+  .bloodOrange:focus,
+  .bloodOrange:active {
+    color: #ff4500;
+  }
+
+  .goldenSun:hover,
+  .goldenSun:focus,
+  .goldenSun:active {
+    color: #ffd700;
+  }
+
   .centered-flex {
     @apply flex;
     @apply flex-col;
@@ -55,53 +91,8 @@
     margin-top: 3rem;
   }
 
-  .card {
-    margin: 1rem;
-    flex-basis: 45%;
-    padding: 3rem;
-    text-align: left;
-    display: grid;
-    place-items: center;
-    color: inherit;
-    text-decoration: none;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-
-  .card h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-  }
-
-  .card p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-
   .logo {
     height: 1em;
-  }
-
-  .blueShadow:hover,
-  .blueShadow:active,
-  .blueShadow:focus {
-    color: #0070f3;
-    box-shadow: rgba(6, 128, 220, 0.2) 0px 7px 29px 0px;
-  }
-
-  .orangeShadow:hover,
-  .orangeShadow:active,
-  .orangeShadow:focus {
-    color: #ff4500;
-    box-shadow: rgba(255, 69, 0, 0.2) 0px 7px 29px 0px;
-  }
-
-  .goldenShadow:hover,
-  .goldenShadow:active,
-  .goldenShadow:focus {
-    color: #ffd700;
-    box-shadow: rgba(255, 215, 0, 0.2) 0px 7px 29px 0px;
   }
 
   @media (max-width: 600px) {

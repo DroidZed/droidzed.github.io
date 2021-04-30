@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { AppThemeContext } from '../../store/themeStore';
-import HeadTag from '../../components/HeadTag';
-import DiscordWidget from '../../components/DiscordWidget';
-import YouTubeWidget from '../../components/YouTubeWidget';
-import TwitterWidget from '../../components/TwitterWidget';
+import { AppThemeContext } from '../store/themeStore';
+import HeadTag from '../components/HeadTag';
+import DiscordWidget from '../components/DiscordWidget';
+import YouTubeWidget from '../components/YouTubeWidget';
+import TwitterWidget from '../components/TwitterWidget';
 
 import styles from './Socials.module.scss';
 

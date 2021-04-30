@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Props } from '../Props';
 
-import styles from './Card.module.scss';
+import styles from './Card.module.css';
 
 const Card: React.FC<Props> = (props) => {
 	return (

@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import Link from 'next/link';
 import Description from '../components/Description';
 import Grid from '../components/Grid';
 import HeadTag from '../components/HeadTag';
-import Title from '../components/Ttitle';
+import Title from '../components/Title';
 import { AppThemeContext } from '../store/themeStore';
 
 function Home() {
@@ -11,7 +10,7 @@ function Home() {
 
 	return (
 		<div className={!theme ? 'dark' : ''} id='darkBody'>
-			<div className='top-container dark:top-container-dark'>
+			<div className='centered-flex top-container dark:top-container-dark'>
 				<HeadTag title='Home' />
 				<Title />
 				<Description />

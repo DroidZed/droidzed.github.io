@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import React, { useContext } from 'react';
-import HeadTag from '../components/HeadTag';
-import { AppThemeContext } from '../store/themeStore';
+import HeadTag from '../../components/HeadTag';
+import { AppThemeContext } from '../../store/themeStore';
 
 function About(): JSX.Element {
 	const { theme } = useContext(AppThemeContext);
@@ -17,9 +16,6 @@ function About(): JSX.Element {
 					repellendus ipsam fugiat numquam nesciunt unde quia, sequi, autem amet
 					commodi quo facilis necessitatibus!
 				</p>
-				<Link href='/'>
-					<a>Back to home page !</a>
-				</Link>
 			</div>
 		</div>
 	);

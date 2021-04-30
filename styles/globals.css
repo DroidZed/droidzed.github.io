@@ -3,136 +3,111 @@
 @tailwind utilities;
 
 @layer utilities {
-	@variants dark {
-		.top-container-dark {
-			background-color: #000;
-			color: #fff;
-		}
-		.code-dark {
-			color: #000;
-		}
-		.goldenDarkShadow:focus,
-		.goldenDarkShadow:active,
-		.goldenDarkShadow:hover {
-			color: #e6c200;
-			box-shadow: rgba(230, 194, 0, 0.2) 0px 7px 29px 0px;
-		}
-	}
+  @variants dark {
+    .top-container-dark {
+      background-color: #000;
+      color: #fff;
+    }
+  }
 
-	.top-container {
-		min-height: 100vh;
-		padding: 0 0.5rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+  .centered-flex {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+  }
 
-	.main {
-		padding: 5rem 0;
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.title a {
-		color: #0070f3;
-		text-decoration: none;
-	}
+  .top-container {
+    @apply min-h-screen;
+    @apply py-0;
+    @apply px-2;
+  }
 
-	.title a:hover,
-	.title a:focus,
-	.title a:active {
-		text-decoration: underline;
-	}
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.title {
-		margin: 0;
-		line-height: 1.15;
-		font-size: 4rem;
-	}
+  .description {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-	.title,
-	.description {
-		text-align: center;
-	}
+  .code {
+    background: #fafafa;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
 
-	.description {
-		line-height: 1.5;
-		font-size: 1.5rem;
-	}
+  .gridLayout {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin-top: 3rem;
+  }
 
-	.code {
-		background: #fafafa;
-		cursor: pointer;
-		border-radius: 5px;
-		padding: 0.75rem;
-		font-size: 1.1rem;
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  .card {
+    margin: 1rem;
+    flex-basis: 45%;
+    padding: 3rem;
+    text-align: left;
+    display: grid;
+    place-items: center;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
 
-	.gridLayout {
-		display: flex;
-		justify-content: center;
-		max-width: 800px;
-		margin-top: 3rem;
-	}
+  .card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
 
-	.card {
-		margin: 1rem;
-		flex-basis: 45%;
-		padding: 3rem;
-		text-align: left;
-		display: grid;
-		place-items: center;
-		color: inherit;
-		text-decoration: none;
-		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-		transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-	}
+  .card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
 
-	.card h3 {
-		margin: 0 0 1rem 0;
-		font-size: 1.5rem;
-	}
+  .logo {
+    height: 1em;
+  }
 
-	.card p {
-		margin: 0;
-		font-size: 1.25rem;
-		line-height: 1.5;
-	}
+  .blueShadow:hover,
+  .blueShadow:active,
+  .blueShadow:focus {
+    color: #0070f3;
+    box-shadow: rgba(6, 128, 220, 0.2) 0px 7px 29px 0px;
+  }
 
-	.logo {
-		height: 1em;
-	}
+  .orangeShadow:hover,
+  .orangeShadow:active,
+  .orangeShadow:focus {
+    color: #ff4500;
+    box-shadow: rgba(255, 69, 0, 0.2) 0px 7px 29px 0px;
+  }
 
-	.blueBoxShadow:hover,
-	.blueBoxShadow:active,
-	.blueBoxShadow:focus {
-		color: #0070f3;
-		box-shadow: rgba(6, 128, 220, 0.2) 0px 7px 29px 0px;
-	}
+  .goldenShadow:hover,
+  .goldenShadow:active,
+  .goldenShadow:focus {
+    color: #ffd700;
+    box-shadow: rgba(255, 215, 0, 0.2) 0px 7px 29px 0px;
+  }
 
-	.orangeBoxShadow:hover,
-	.orangeBoxShadow:active,
-	.orangeBoxShadow:focus {
-		color: #ff4500;
-		box-shadow: rgba(255, 69, 0, 0.2) 0px 7px 29px 0px;
-	}
-
-	.goldenBoxShadow:hover,
-	.goldenBoxShadow:active,
-	.goldenBoxShadow:focus {
-		color: #ffd700;
-		box-shadow: rgba(255, 215, 0, 0.2) 0px 7px 29px 0px;
-	}
-
-	@media (max-width: 600px) {
-		.gridLayout {
-			width: 100%;
-			flex-direction: column;
-		}
-	}
+  @media (max-width: 600px) {
+    .gridLayout {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
 }

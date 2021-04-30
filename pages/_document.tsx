@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { GTM_ID } from "../utils/gtm";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { GTM_ID } from '../utils/gtm';
 
 export default class SiteDocument extends Document {
-
 	static async getInitialProps(ctx: any) {
-		const initialProps = await Document.getInitialProps(ctx)
-		return { ...initialProps }
+		const initialProps = await Document.getInitialProps(ctx);
+		return { ...initialProps };
 	}
-
 
 	render() {
 		return (
@@ -31,14 +29,13 @@ export default class SiteDocument extends Document {
 					<noscript>
 						<iframe
 							src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-							height="0"
-							width="0"
+							height='0'
+							width='0'
 							style={{ display: 'none', visibility: 'hidden' }}
 						/>
 					</noscript>
-
 				</body>
-			</Html >
+			</Html>
 		);
 	}
 }

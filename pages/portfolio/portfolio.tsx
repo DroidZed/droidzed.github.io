@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import HeadTag from '../components/HeadTag';
-import { AppThemeContext } from '../store/themeStore';
+import HeadTag from '../../components/HeadTag';
+import { AppThemeContext } from '../../store/themeStore';
+
+import styles from './Portfolio.module.scss';
 
 export default function Portfolio(): JSX.Element {
 	const { theme } = useContext(AppThemeContext);

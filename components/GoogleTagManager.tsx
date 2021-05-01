@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import * as gtm from '../../utils/gtm';
+import * as gtm from '../utils/gtm';
 
 const GoogleTagManager = ({ children }: any) => {
+
 	const router = useRouter();
 
 	useEffect(() => {

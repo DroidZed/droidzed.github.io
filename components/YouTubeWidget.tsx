@@ -1,6 +1,6 @@
 import React from 'react';
 
-const YouTubeWidget: React.FC = (props) => {
+const YouTubeWidget: React.FC = () => {
 	return (
 		<div>
 			<p>YouTube Channel widget here</p>

@@ -1,19 +1,18 @@
+import React from 'react';
+
 import Link from 'next/link';
-import React, { useContext } from 'react';
-import { AppThemeContext } from '../store/themeStore';
+
 import HeadTag from '../components/HeadTag';
+import TopContainer from '../components/TopContainer';
 
 export default function FourOhFour() {
-	const { theme } = useContext(AppThemeContext);
 	return (
-		<div className={!theme ? 'dark' : ''}>
-			<div className='top-container dark:top-container-dark'>
-				<HeadTag title='Page Not Found' />
-				<h1>404 - Page Not Found</h1>
-				<Link href='/'>
-					<a>Go back home</a>
-				</Link>
-			</div>
-		</div>
+		<TopContainer>
+			<HeadTag title='Page Not Found' />
+			<h1>404 - Page Not Found</h1>
+			<Link href='/'>
+				<a>Go back home</a>
+			</Link>
+		</TopContainer>
 	);
 }

@@ -1,15 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import HeadTag from '../components/HeadTag';
-import { AppThemeContext } from '../store/themeStore';
+import TopContainer from '../components/TopContainer';
 
-export default function Portfolio(): JSX.Element {
-	const { theme } = useContext(AppThemeContext);
+export default function Portfolio() {
 	return (
-		<div className={!theme ? 'dark' : ''}>
-			<div className='top-container dark:top-container-dark'>
-				<HeadTag />
-				<h1>Portfolio</h1>
-			</div>
-		</div>
+		<TopContainer>
+			<HeadTag title='Portfolio' />
+			<h1>Portfolio</h1>
+		</TopContainer>
 	);
 }

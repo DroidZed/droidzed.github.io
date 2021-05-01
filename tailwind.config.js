@@ -1,4 +1,5 @@
 module.exports = {
+	mode: 'jit',
 	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 	darkMode: 'class', // or 'media' or 'class'
 	theme: {
@@ -7,11 +8,10 @@ module.exports = {
 				beautifulBlue: '#0070f3',
 				bloodOrange: '#ff4500',
 				goldenSun: '#ffd700',
+				whiteSmokeLight: '#fafafa',
 			},
-			boxShadow: {
-				beautifulBlueShadow: 'rgba(6, 128, 220, 0.2) 0px 7px 29px 0px',
-				bloodOrangeShadow: 'box-shadow: rgba(255, 69, 0, 0.2) 0px 7px 29px 0px',
-				goldenSunShadow: 'box-shadow: rgba(255, 215, 0, 0.2) 0px 7px 29px 0px',
+			screens: {
+				smd: { max: '800px' },
 			},
 		},
 	},
@@ -19,6 +19,7 @@ module.exports = {
 		extend: {
 			textColor: ['hover', 'focus', 'active'],
 			boxShadow: ['hover', 'focus', 'active'],
+			textDecoration: ['hover', 'focus', 'active'],
 		},
 	},
 	plugins: [],

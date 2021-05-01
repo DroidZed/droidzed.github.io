@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.centered-flex-col {
+		@apply flex;
+		@apply flex-col;
+		@apply items-center;
+		@apply justify-center;
+	}
+	.centered-flex {
+		@apply flex;
+		@apply items-center;
+		@apply justify-center;
+	}
+}

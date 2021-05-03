@@ -2,7 +2,7 @@ import React from 'react'
 import HeadTag from '../components/HeadTag'
 import TopContainer from '../components/TopContainer'
 
-export default function _offline() {
+export default function Offline() {
     return (
         <TopContainer>
             <HeadTag title="Offline"/>

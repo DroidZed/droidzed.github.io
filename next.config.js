@@ -2,6 +2,10 @@ const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
 module.exports = withPWA({
+
+	future: {
+		webpack5: true
+	},
 	images: {
 		domains: ["avatars.githubusercontent.com"],
 	},
@@ -15,9 +19,12 @@ module.exports = withPWA({
 	pwa: {
 		disable: process.env.NODE_ENV === 'development',
 		register: true,
-		scope: '/app',
+		scope: '/',
 		sw: 'service-worker.js',
 		dest: "public",
 		runtimeCaching,
+		fallbacks: {
+			document: '/offlinePage'
+		}
 	},
 });

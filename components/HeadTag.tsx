@@ -12,6 +12,7 @@ const HeadTag: React.FC<PageTitleProps> = ({ title }) => {
 		<Head>
 			<PwaMetaTags />
 			<NormalHTMLMetaTags />
+			<title>Aymen Dhahri{` | ${title}`}</title>
 			<meta name="google-site-verification" content={`${GSV_ID}`} />
 			<TwitterMetaTags />
 			<OgMetaTags title={title} />

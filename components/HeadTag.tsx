@@ -1,48 +1,20 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
+import TwitterMetaTags from "./Meta/TwitterMetaTags";
+import OgMetaTags from "./Meta/OgMetaTags";
+import PwaMetaTags from "./Meta/PwaMetaTags";
+import NormalHTMLMetaTags from "./Meta/NormalHTMLMetaTags";
+import { PageTitleProps } from "./Meta/PageTitleProps";
+import { GSV_ID } from "../utils/gtm";
 
-interface Props {
-	title?: string;
-}
-
-const HeadTag: React.FC<Props> = (props) => {
+const HeadTag: React.FC<PageTitleProps> = ({ title }) => {
 	return (
 		<Head>
-			{/** HTML META TAGS  */}
-			<title>● Sanctuary ●{` | ${props.title}`}</title>
-			<link rel='icon' href='/images/favicon.png' />
-			<link rel="canonical" href="https://www.droidzed.me"/>
-			<meta name='description' content='Sanctuary of DroidZed, my personal website and portfolio. Come check it out and discover more about my world.'/>
-			<meta name='keywords' content='website,personal,sanctuary'/>
-			<meta name='robots' content='index,follow'/>
-			<meta httpEquiv='Content-Type' content='text/html; charset=utf-8'/>
-			<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
-
-			{/** GOOGLE SITE VERIFICATION  */}
-
-			<meta name='google-site-verification' content='J5tfFdlGdM5ApvAHEsMg-CBPSyJv6wHdEtP45wMxEPU'/>
-
-			{/** TWITTER META TAGS  */}
-
-			<meta name='twitter:card' content='summary_large_image'/>
-			<meta name='twitter:site' content='@Droid7ed'/>
-			<meta name='twitter:title' content="𝕯𝖗𝖔𝖎𝖉𝖅𝖊𝖉'𝖘 𝕯𝖔𝖒𝖆𝖎𝖓"/>
-			<meta name='twitter:creator' content='@Droid7ed'/>
-			<meta name='twitter:image' content='https://i.imgur.com/pLcrVSn.png'/>
-			<meta name='twitter:domain' content='droidzed.me'/>
-
-			{/** OPEN GRAPH META TAGS  */}
-			<meta property='og:title' content="𝕯𝖗𝖔𝖎𝖉𝖅𝖊𝖉'𝖘 𝕯𝖔𝖒𝖆𝖎𝖓"/>
-			<meta property='og:url' content={`https://droidzed.me${props.title != 'Home' ? '/' + props.title : ''}`}/>
-			<meta property='og:type' content='website'/>
-			<meta property='og:description' content='Sanctuary of DroidZed, my personal website and portfolio. Come check it out and discover more about my world.'/>
-			<meta property='og:site_name' content="𝕯𝖗𝖔𝖎𝖉𝖅𝖊𝖉'𝖘 𝕯𝖔𝖒𝖆𝖎𝖓"/>
-			<meta property='og:image' content='http://www.droidzed.me/sanctuary_1200.png'/>
-			<meta property='og:image:secure' content='https://i.imgur.com/pLcrVSn.png'/>
-			<meta property='og:image:alt' content='sanctuary icon'/>
-			<meta property='og:image:type' content='image/png'/>
-			<meta property='og:image:width' content='1042'/>
-			<meta property='og:image:height' content='1058'/>
+			<PwaMetaTags />
+			<NormalHTMLMetaTags />
+			<meta name="google-site-verification" content={`${GSV_ID}`} />
+			<TwitterMetaTags />
+			<OgMetaTags title={title} />
 		</Head>
 	);
 };

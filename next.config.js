@@ -19,5 +19,8 @@ module.exports = withPWA({
 		sw: 'service-worker.js',
 		dest: "public",
 		runtimeCaching,
+		fallbacks: {
+			document: '/offlinePage'
+		}
 	},
 });

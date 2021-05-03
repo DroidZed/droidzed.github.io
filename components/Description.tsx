@@ -1,3 +1,6 @@
+import { faMoon as farMoon } from '@fortawesome/free-regular-svg-icons';
+import { faMoon as fasMoon } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { AppThemeContext } from '../store/themeStore';
 
@@ -19,7 +22,12 @@ const Description: React.FC = () => {
 					handleChangeTheme(!theme);
 				}}
 			>
-				Sanctuary
+				<span>Sanctuary</span>{' '}
+				{theme ? (
+					<FontAwesomeIcon icon={farMoon} />
+				) : (
+					<FontAwesomeIcon icon={fasMoon} />
+				)}
 			</code>{' '}
 			but with a little extra spice !
 		</p>

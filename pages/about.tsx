@@ -1,35 +1,32 @@
-import axios from 'axios';
-import React from 'react';
-import HeadTag from '../components/HeadTag';
-import TopContainer from '../components/TopContainer';
+import axios, { AxiosResponse } from "axios";
+import React from "react";
+import HeadTag from "../components/HeadTag";
+import TopContainer from "../components/TopContainer";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import InfoCard from "../components/InfoCard";
+import { DRZ } from "../types/me";
 
-export default function About() {
+export default function About({
+	me,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<TopContainer>
-			<HeadTag title='About' />
+			<HeadTag title="About" />
 			<h1>About Page</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-				voluptas totam voluptates exercitationem vero eius doloribus repellendus
-				ipsam fugiat numquam nesciunt unde quia, sequi, autem amet commodi quo
-				facilis necessitatibus!
-			</p>
+			<div>
+				<InfoCard info={me} />
+			</div>
 		</TopContainer>
 	);
 }
 
-export async function getStaticProps() {
-	let data = {};
-
-	axios(
-		'https://gist.githubusercontent.com/DroidZed/4a2ee28c40cf35d39ebdd7c44b4746ab/raw/fd16a3ee3ee6aaba34380d080634978ea5e0ab18/me.json'
-	).then((resp) => {
-		data = resp.data;
-	});
-
-	console.log(data);
+export const getStaticProps: GetStaticProps = async () => {
+	let resp: AxiosResponse<DRZ> = await axios.get(
+		"https://gist.githubusercontent.com/DroidZed/4a2ee28c40cf35d39ebdd7c44b4746ab/raw/7aba0c82307ce202b5b7230d6481fa898ec22a0f/me.json"
+	);
 
 	return {
-		props: { ...data }, // will be passed to the page component as props
+		props: { me: resp.data },
+		revalidate: 1,
 	};
-}
+};

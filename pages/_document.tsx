@@ -22,6 +22,11 @@ export default class SiteDocument extends Document {
 			})(window,document,'script','dataLayer','${GTM_ID}');`,
 						}}
 					/>
+					<script
+						async
+						src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2700417172357993'
+						crossOrigin='anonymous'
+					></script>
 				</Head>
 				<body>
 					<noscript>

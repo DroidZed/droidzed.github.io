@@ -14,7 +14,7 @@ const PwaMetaTags:React.FC = () => {
 			<link href='/images/icons/maskable_icon_x384.png' rel='icon' type='image/png' sizes='384x384' />
 			<link href='/images/icons/maskable_icon_x512.png' rel='icon' type='image/png' sizes='512x512' />
 			<link href='/images/icons/maskable_icon_x1200.png' rel='icon' type='image/png' sizes='1200x1200' />
-			<link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
+			<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png"></link>
         </>
     )
 }

@@ -1,10 +1,8 @@
 import React from "react";
-import { PageTitleProps } from "./PageTitleProps";
 
-const NormalHTMLMetaTags: React.FC<PageTitleProps> = ({ title }) => {
+const NormalHTMLMetaTags: React.FC = () => {
 	return (
 		<>
-			<title>Aymen Dhahri{` | ${title}`}</title>
 			<link rel="icon" href="/images/favicon.png" />
 			<link rel="canonical" href="https://www.droidzed.me" />
 			<meta

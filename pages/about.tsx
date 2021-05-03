@@ -3,20 +3,8 @@ import React from 'react';
 import HeadTag from '../components/HeadTag';
 import TopContainer from '../components/TopContainer';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-
-type DRZ = {
-	fullName: string;
-	dob: Dob;
-	paragraph: string;
-	origin: string;
-	hobbies: string[];
-};
-
-type Dob = {
-	day: number;
-	month: number;
-	year: number;
-};
+import InfoCard from '../components/InfoCard';
+import { DRZ } from '../types/me';
 
 export default function About({
 	me,
@@ -26,17 +14,7 @@ export default function About({
 			<HeadTag title='About' />
 			<h1>About Page</h1>
 			<div>
-				<div>
-					<p>{me.origin}</p>
-				</div>
-				<div>
-					<img
-						width={100}
-						height={100}
-						src='https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg'
-						alt='tunisian flag'
-					/>
-				</div>
+				<InfoCard info={me} />
 			</div>
 		</TopContainer>
 	);
@@ -44,13 +22,11 @@ export default function About({
 
 export const getStaticProps: GetStaticProps = async () => {
 	let resp: AxiosResponse<DRZ> = await axios.get(
-		'https://gist.githubusercontent.com/DroidZed/4a2ee28c40cf35d39ebdd7c44b4746ab/raw/fd16a3ee3ee6aaba34380d080634978ea5e0ab18/me.json'
+		'https://gist.githubusercontent.com/DroidZed/4a2ee28c40cf35d39ebdd7c44b4746ab/raw/7aba0c82307ce202b5b7230d6481fa898ec22a0f/me.json'
 	);
 
-	const me = resp.data;
-
 	return {
-		props: { me },
+		props: { me: resp.data },
 		revalidate: 1,
 	};
 };

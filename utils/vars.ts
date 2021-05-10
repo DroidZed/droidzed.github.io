@@ -1,1 +1,0 @@
-export const GSV_ID = process.env.GSV_ID;

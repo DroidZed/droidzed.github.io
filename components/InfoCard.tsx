@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { DRZ } from '../types/me';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { DRZ } from "../types/DRZ";
+import axios from "axios";
 
 interface InfoCardProps {
 	info: DRZ;
@@ -23,36 +23,47 @@ const InfoCard: React.FC<InfoCardProps> = ({ info }) => {
 	}, []);
 
 	return (
-		<div>
+		<div className="dark:bg-gray-900 border-solid flex flex-row-reverse rounded-2xl p-4 w-100 text-justify shadow-cardShadow">
 			<div>
 				<div>{info.fullName}</div>
 				<div>
-					{githubCrawl['avatar_url'] != undefined ? (
+					{githubCrawl["avatar_url"] != undefined ? (
 						<Image
 							width={100}
 							height={100}
-							src={githubCrawl['avatar_url']} // TODO: fix this !
-							alt='profile picture'
+							src={githubCrawl["avatar_url"]}
+							alt="profile picture"
 							quality={100}
 						/>
 					) : (
 						<img
 							width={100}
 							height={100}
-							src={githubCrawl['avatar_url']} // TODO: fix this !
-							alt='profile picture'
+							src={githubCrawl["avatar_url"]}
+							alt="profile picture"
 						/>
 					)}
 				</div>
 				<div>
-					<Image
-						width={100}
-						height={100}
-						src='/images/Flag_of_Tunisia.svg'
-						alt='tunisian flag'
-						quality={100}
-					/>
+					<p>{info.paragraph}</p>
 				</div>
+				<div>
+					<h2>Hobbies :</h2>
+					<React.Fragment>
+						{info.hobbies?.map((hob) => (
+							<p key={info.hobbies?.indexOf(hob)}>{hob}</p>
+						))}
+					</React.Fragment>
+				</div>
+			</div>
+			<div className="justify-start">
+				<Image
+					width={100}
+					height={100}
+					src="/images/Flag_of_Tunisia.svg"
+					alt="tunisian flag"
+					quality={100}
+				/>
 			</div>
 		</div>
 	);

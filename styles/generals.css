@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer utilities {
-	.centered-flex-col {
+	.centered-flex {
 		@apply flex;
-		@apply flex-col;
 		@apply items-center;
 		@apply justify-center;
 	}
-	.centered-flex {
+	.centered-flex-col {
 		@apply flex;
+		@apply flex-col;
 		@apply items-center;
 		@apply justify-center;
 	}

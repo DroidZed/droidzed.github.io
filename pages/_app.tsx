@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
-import { AppProps } from 'next/app';
-import { ThemeWrapper } from '../store/themeStore';
-import GoogleTagManager from '../components/GoogleTagManager';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import AOS from 'aos';
+import React, { useEffect } from "react";
+import { AppProps } from "next/app";
+import { ThemeWrapper } from "../store/themeStore";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import AOS from "aos";
 
-import '../styles/generals.css';
+import "../styles/generals.css";
 
 config.autoAddCss = false;
 
@@ -15,9 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<ThemeWrapper>
-			<GoogleTagManager>
-				<Component {...pageProps} />
-			</GoogleTagManager>
+			<Component {...pageProps} />
 		</ThemeWrapper>
 	);
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import { GSV_ID } from "../utils/vars";
 export interface PageTitleProps {
 	title?: string;
 }
@@ -30,7 +29,7 @@ const HeadTag: React.FC<PageTitleProps> = ({ title }) => {
 			<meta charSet="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 			<title>Aymen Dhahri{` | ${title}`}</title>
-			<meta name="google-site-verification" content={`${GSV_ID}`} />
+			<meta name="google-site-verification" content="J5tfFdlGdM5ApvAHEsMg-CBPSyJv6wHdEtP45wMxEPU" />
 			{/* Twitter tags */}
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content="@Droid7ed" />

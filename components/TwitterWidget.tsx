@@ -1,20 +1,22 @@
-import React from 'react';
+import React from "react";
 
-const TwitterWidget: React.FC = (props) => {
+const TwitterWidget: React.FC = () => {
 	return (
 		<div>
 			<a
-				className='twitter-timeline'
-				data-width='400'
-				data-height='500'
-				data-theme='dark'
-				href='https://twitter.com/Droid7ed?ref_src=twsrc%5Etfw'>
+				className="twitter-timeline"
+				data-width="400"
+				data-height="500"
+				data-theme="dark"
+				href="https://twitter.com/Droid7ed?ref_src=twsrc%5Etfw"
+			>
 				Tweets by Droid7ed
-			</a>{' '}
+			</a>{" "}
 			<script
 				async
-				src='https://platform.twitter.com/widgets.js'
-				charSet='utf-8'></script>
+				src="https://platform.twitter.com/widgets.js"
+				charSet="utf-8"
+			></script>
 		</div>
 	);
 };

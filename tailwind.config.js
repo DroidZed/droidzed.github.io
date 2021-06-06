@@ -1,5 +1,4 @@
 module.exports = {
-	mode: "jit",
 	purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
 	darkMode: "media", // or 'media' or 'class'
 	theme: {
@@ -10,12 +9,17 @@ module.exports = {
 				goldenSun: "#ffd700",
 				whiteSmokeLight: "#fafafa",
 				magesticMagenta: "#ffd700",
+				deathGray: "#141414",
 			},
 			screens: {
 				smd: { max: "800px" },
 			},
 			boxShadow: {
 				cardShadow: "0px 7px 29px 0px rgba(100, 100, 111, 0.2)",
+			},
+			width: {
+				90: "90%",
+				70: "70%",
 			},
 		},
 	},

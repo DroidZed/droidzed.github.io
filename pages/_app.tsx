@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import AOS from "aos";
 
-import "../styles/generals.css";
+import "tailwindcss/tailwind.css";
 
 config.autoAddCss = false;
 

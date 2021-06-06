@@ -23,7 +23,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ info }) => {
 	}, []);
 
 	return (
-		<div className="dark:bg-gray-900 border-solid flex flex-row-reverse rounded-2xl p-4 w-100 text-justify shadow-cardShadow">
+		<div className="dark:bg-deathGray border-solid flex rounded-2xl p-4 flex-1 text-justify shadow-cardShadow">
 			<div>
 				<div>{info.fullName}</div>
 				<div>
@@ -49,21 +49,12 @@ const InfoCard: React.FC<InfoCardProps> = ({ info }) => {
 				</div>
 				<div>
 					<h2>Hobbies :</h2>
-					<React.Fragment>
+					<ul>
 						{info.hobbies?.map((hob) => (
-							<p key={info.hobbies?.indexOf(hob)}>{hob}</p>
+							<li key={info.hobbies?.indexOf(hob)}>{hob}</li>
 						))}
-					</React.Fragment>
+					</ul>
 				</div>
-			</div>
-			<div className="justify-start">
-				<Image
-					width={100}
-					height={100}
-					src="/images/Flag_of_Tunisia.svg"
-					alt="tunisian flag"
-					quality={100}
-				/>
 			</div>
 		</div>
 	);

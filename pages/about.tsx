@@ -6,16 +6,22 @@ import TopContainer from "../components/TopContainer";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import InfoCard from "../components/InfoCard";
 import { DRZ } from "../types/DRZ";
+import SpotifyWidget from "../components/SpotifyWidget";
+import HeaderText from "../components/HeaderText";
 
 export default function About({
 	me,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<TopContainer>
-			<div className="flex-col">
+			<div className="pt-20 flex flex-col flex-1">
+				<HeaderText>𝓐𝓫𝓸𝓾𝓽 𝓜𝓮</HeaderText>
 				<HeadTag title="About" />
-				<div>
+				<div className="w-70">
 					<InfoCard info={me} />
+				</div>
+				<div>
+					<SpotifyWidget />
 				</div>
 			</div>
 		</TopContainer>

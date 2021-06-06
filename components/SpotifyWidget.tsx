@@ -8,7 +8,7 @@ const SpotifyWidget: React.FC = () => {
 				width="300"
 				height="380"
 				frameBorder="0"
-				allowtransparency="true"
+				allowTransparency={true}
 				allow="encrypted-media"
 			></iframe>
 		</div>

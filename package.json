@@ -25,7 +25,7 @@
 	},
 	"devDependencies": {
 		"@types/aos": "^3.0.3",
-		"@types/node": "^15.12.1",
+		"@types/node": "^15.12.2",
 		"@types/react": "^17.0.9",
 		"@types/three": "^0.129.1",
 		"autoprefixer": "^10.2.6",

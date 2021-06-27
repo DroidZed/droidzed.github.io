@@ -17,11 +17,13 @@ export default function About({
 			<div className="pt-20 flex flex-col flex-1">
 				<HeaderText>𝓐𝓫𝓸𝓾𝓽 𝓜𝓮</HeaderText>
 				<HeadTag title="About" />
-				<div className="w-70">
-					<InfoCard info={me} />
-				</div>
-				<div>
-					<SpotifyWidget />
+				<div className="flex flex-row justify-items items-center">
+					<div className="w-70">
+						<InfoCard info={me} />
+					</div>
+					<div>
+						<SpotifyWidget />
+					</div>
 				</div>
 			</div>
 		</TopContainer>

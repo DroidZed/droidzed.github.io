@@ -1,5 +1,5 @@
 // @ts-nocheck
-const CACHE_NAME = 'coming-soon';
+const CACHE_NAME = 'coming-soon-v2';
 
 const CACHE_FILES = [
 	"/",

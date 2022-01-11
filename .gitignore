@@ -1,1 +1,5 @@
 # will see what to put here...
+
+node_modules/
+
+.vscode/

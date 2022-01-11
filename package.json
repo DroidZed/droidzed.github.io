@@ -4,8 +4,8 @@
 	"description": "Personal website",
 	"main": "index.js",
 	"scripts": {
-		"minify-css": "css-minify -d assets/css -o assets/css",
 		"preprocess": "postcss global.css -o assets/css/styles.css",
+		"minify-css": "css-minify -d assets/css -o assets/css",
 		"build": "npm run preprocess && npm run minify-css"
 	},
 	"repository": {

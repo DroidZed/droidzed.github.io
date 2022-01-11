@@ -15,5 +15,8 @@ jobs:
       - name: Install 🔧
         run: npm install
 
-      - name: Build 🏗️
-        run: npm run build
+      - name: Pre-Process 🔩
+        run: npm run preprocess
+
+      - name: Minify CSS 🌠
+        run: npm run minify-css

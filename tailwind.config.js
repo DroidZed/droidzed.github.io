@@ -1,5 +1,7 @@
+const dev = process.env.NODE_ENV !== 'production';
+console.log(dev);
 module.exports = {
-	content: ['./**/*.html'],
+	content: dev ? [] : ['./**/*.html'],
 	theme: {
 		extend: {
 			fontFamily: {

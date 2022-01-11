@@ -4,7 +4,9 @@
 	"description": "Personal website",
 	"main": "index.js",
 	"scripts": {
-		"build": "postcss src/styles.css -o css/styles.css"
+		"minify-css": "css-minify -d assets/css -o assets/css",
+		"preprocess": "postcss global.css -o assets/css/styles.css",
+		"build": "npm run preprocess && npm run minify-css"
 	},
 	"repository": {
 		"type": "git",
@@ -27,8 +29,11 @@
 	"dependencies": {},
 	"devDependencies": {
 		"autoprefixer": "^10.4.2",
+		"clean-css": "^5.2.2",
+		"css-minify": "^2.0.0",
 		"postcss": "^8.4.5",
 		"postcss-cli": "^9.1.0",
-		"tailwindcss": "^3.0.13"
+		"tailwindcss": "^3.0.13",
+		"terser": "^5.10.0"
 	}
 }

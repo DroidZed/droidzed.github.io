@@ -3,6 +3,14 @@ name: Website CI
 on: push
 
 jobs:
+
+  prod-ready:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prod 🚀
+        run: cat "NODE_ENV=production" > .env
+
   build:
     runs-on: ubuntu-latest
 
@@ -11,9 +19,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-        
-        env:
-          NODE_ENV: 'production'
 
       - name: Install 🔧
         run: npm install

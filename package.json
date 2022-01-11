@@ -26,9 +26,7 @@
 		"url": "https://github.com/DroidZed/droidzed.github.io/issues"
 	},
 	"homepage": "https://github.com/DroidZed/droidzed.github.io#readme",
-	"dependencies": {
-		"dotenv": "^11.0.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"autoprefixer": "^10.4.2",
 		"clean-css": "^5.2.2",

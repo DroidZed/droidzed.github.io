@@ -3,14 +3,6 @@ name: Website CI
 on: push
 
 jobs:
-
-  prod-ready:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Prod 🚀
-        run: echo "NODE_ENV=production" > .env
-
   build:
     runs-on: ubuntu-latest
 

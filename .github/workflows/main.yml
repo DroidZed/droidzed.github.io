@@ -23,7 +23,7 @@ jobs:
 
       - name: Push Code ⚡
         run: |
-          git config --global user.name 'DroidZed'
+          git config --global user.name 'Aymen Dhahri'
           git config --global user.email '41507665+DroidZed@users.noreply.github.com'
           git commit -am "Updated CSS 🔥"
           git push

@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Prod 🚀
-        run: cat "NODE_ENV=production" > .env
+        run: echo "NODE_ENV=production" > .env
 
   build:
     runs-on: ubuntu-latest

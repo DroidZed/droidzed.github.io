@@ -23,6 +23,7 @@ jobs:
 
       - name: Push Code ⚡
         run: |
-            git add .
-            git commit -m "Updated CSS 🔥"
-            git push origin main
+          git config --global user.name 'DroidZed'
+          git config --global user.email 'DroidZed@users.noreply.github.com'
+          git commit -am "Updated CSS 🔥"
+          git push

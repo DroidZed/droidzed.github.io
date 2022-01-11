@@ -20,3 +20,9 @@ jobs:
 
       - name: Minify CSS 🌠
         run: npm run minify-css
+
+      - name: Push Code ⚡
+        run: |
+            git add .
+            git commit -m "Updated CSS 🔥"
+            git push origin main

@@ -13,16 +13,5 @@ jobs:
       - name: Install 🔧
         run: npm install
 
-      - name: Pre-Process 🔩
-        run: npm run preprocess
-
       - name: Minify CSS 🌠
         run: npm run minify-css
-
-      - name: Push Code ⚡
-        run: |
-          git config user.name 'DroidZed'
-          git config user.email 'aymen.dragon5@gmai.com'
-          git add .
-          git commit -m "Updated CSS 🔥"
-          git push

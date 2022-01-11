@@ -6,7 +6,7 @@
 	"scripts": {
 		"preprocess": "postcss global.css -o assets/css/styles.css",
 		"minify-css": "css-minify -d assets/css -o assets/css",
-		"build": "npm run preprocess && npm run minify-css"
+		"build": "npm run preprocess"
 	},
 	"repository": {
 		"type": "git",

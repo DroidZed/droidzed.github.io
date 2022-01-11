@@ -21,5 +21,7 @@ jobs:
 
       - name: Push Code ⚡
         run: |
+          git config user.name 'DroidZed'
+          git config user.email 'aymen.dragon5@gmai.com'
           git commit -am "Updated CSS 🔥"
           git push

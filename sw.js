@@ -1,53 +1,42 @@
 // @ts-nocheck
-var CACHE_NAME = 'coming-soon';
+const CACHE_NAME = 'coming-soon';
 
-self.addEventListener('install', function (e) {
-	e.waitUntil(
-		caches.open(CACHE_NAME).then(function (cache) {
-			return cache.addAll([
-				'assets/css/styles.min.css',
-				'assets/js/app.js',
-				'manifest.json',
-				'index.html',
-			]);
-		})
-	);
+const CACHE_FILES = [
+	"/",
+	'index.html',
+	'manifest.json',
+	'./assets/css/styles.min.css',
+	'./assets/js/app.js',
+];
+
+self.addEventListener("install", e => {
+  console.log("[ServiceWorker**] Install");
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      console.log("[ServiceWorker**] Caching app shell");
+      return cache.addAll(CACHE_FILES);
+    })
+  );
 });
 
-self.addEventListener('fetch', (event) => {
-	//We defind the promise (the async code block) that return either the cached response or the network one
-	//It should return a response object
-	const getCustomResponsePromise = async () => {
-		console.log(`URL ${event.request.url}`, `location origin ${location}`);
 
-		try {
-			//Try to get the cached response
-			const cachedResponse = await caches.match(event.request);
-			if (cachedResponse) {
-				//Return the cached response if present
-				console.log(`Cached response ${cachedResponse}`);
-				return cachedResponse;
-			}
+self.addEventListener("activate", event => {
+  caches.keys().then(keyList => {
+    return Promise.all(
+      keyList.map(key => {
+        if (key !== CACHE_NAME) {
+          console.log("[ServiceWorker] - Removing old cache", key);
+          return caches.delete(key);
+        }
+      })
+    );
+  });
+});
 
-			//Get the network response if no cached response is present
-			const netResponse = await fetch(event.request);
-			console.log(`adding net response to cache`);
-
-			//Here, we add the network response to the cache
-			let cache = await caches.open(CACHE_NAME);
-
-			//We must provide a clone of the response here
-			cache.put(event.request, netResponse.clone());
-
-			//return the network response
-			return netResponse;
-		} catch (err) {
-			console.error(`Error ${err}`);
-			throw err;
-		}
-	};
-
-	//In order to override the default fetch behavior, we must provide the result of our custom behavoir to the
-	//event.respondWith method
-	event.respondWith(getCustomResponsePromise());
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    caches.match(event.request, { ignoreSearch: true }).then(response => {
+      return response || fetch(event.request);
+    })
+  );
 });

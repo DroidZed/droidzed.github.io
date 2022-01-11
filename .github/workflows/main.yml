@@ -9,8 +9,6 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
 
       - name: Install 🔧
         run: npm install
@@ -23,7 +21,5 @@ jobs:
 
       - name: Push Code ⚡
         run: |
-          git config --global user.name '41507665+DroidZed'
-          git config --global user.email '41507665+DroidZed@users.noreply.github.com'
           git commit -am "Updated CSS 🔥"
           git push

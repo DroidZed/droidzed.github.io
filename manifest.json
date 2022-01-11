@@ -48,11 +48,17 @@
 
 	"start_url": "index.html",
 
+	"description": "My personal website, built from scratch with minimal effort.",
+
+	"orientation": "Portrait",
+
 	"background_color": "#000000",
 
 	"display": "fullscreen",
 
 	"scope": "/",
+
+	"id": "/droidzed.github.io/index.html",
 
 	"theme_color": "#0e005c"
 }

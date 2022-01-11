@@ -4,7 +4,7 @@
 	"description": "Personal website",
 	"main": "index.js",
 	"scripts": {
-		"build": "postcss src/styles.css -o build/css/styles.css"
+		"build": "postcss src/styles.css -o css/styles.css"
 	},
 	"repository": {
 		"type": "git",

@@ -3,15 +3,18 @@ name: Website CI
 on: push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v2
 
-      - name: Install 🔧
-        run: npm install
+            - name: Install-Deps 🔧
+              run: npm install
 
-      - name: Minify CSS 🌠
-        run: npm run minify-css
+            - name: Build-CSS 🧬
+              run: npm run preprocess
+
+            - name: Minify-CSS 🌠
+              run: npm run minify-css

@@ -13,8 +13,5 @@ jobs:
             - name: Install-Deps 🔧
               run: npm install
 
-            - name: Build-CSS 🧬
-              run: npm run preprocess
-
             - name: Minify-CSS 🌠
               run: npm run minify-css

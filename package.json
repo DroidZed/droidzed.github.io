@@ -1,39 +1,59 @@
 {
-	"name": "droidzed.github.io",
-	"version": "1.0.0",
-	"description": "Personal website",
-	"main": "index.js",
-	"scripts": {
-		"preprocess": "postcss global.css -o assets/css/styles.css",
-		"minify-css": "css-minify -d assets/css -o assets/css",
-		"build": "npm run preprocess"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/DroidZed/droidzed.github.io.git"
-	},
-	"keywords": [
-		"css",
-		"html",
-		"github-pages",
-		"website",
-		"js",
-		"static"
-	],
-	"author": "DroidZed",
-	"license": "Apache-2.0",
-	"bugs": {
-		"url": "https://github.com/DroidZed/droidzed.github.io/issues"
-	},
-	"homepage": "https://github.com/DroidZed/droidzed.github.io#readme",
-	"dependencies": {},
-	"devDependencies": {
-		"autoprefixer": "^10.4.2",
-		"clean-css": "^5.2.2",
-		"css-minify": "^2.0.0",
-		"postcss": "^8.4.5",
-		"postcss-cli": "^9.1.0",
-		"tailwindcss": "^3.0.13",
-		"terser": "^5.10.0"
-	}
+    "name": "droidzed.github.io",
+    "version": "1.0.0",
+    "description": "Personal website",
+    "main": "index.js",
+    "scripts": {
+        "preprocess": "postcss global.css -o assets/css/styles.css",
+        "minify-css": "css-minify -d assets/css -o assets/css",
+        "build": "npm run preprocess",
+        "format": "",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": false,
+        "overrides": [
+            {
+                "files": "*.js",
+                "options": {
+                    "parser": "flow"
+                }
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DroidZed/droidzed.github.io.git"
+    },
+    "keywords": [
+        "css",
+        "html",
+        "github-pages",
+        "website",
+        "js",
+        "static"
+    ],
+    "author": "DroidZed",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/DroidZed/droidzed.github.io/issues"
+    },
+    "homepage": "https://github.com/DroidZed/droidzed.github.io#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.2",
+        "clean-css": "^5.2.2",
+        "css-minify": "^2.0.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.1.7",
+        "postcss": "^8.4.5",
+        "prettier": "2.5.1",
+        "tailwindcss": "^3.0.13",
+        "terser": "^5.10.0"
+    }
 }

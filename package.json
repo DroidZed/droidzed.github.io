@@ -5,8 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"preprocess": "postcss global.css -o assets/css/styles.css",
-		"minify-css": "css-minify -d assets/css -o assets/css",
-		"build": "npm run preprocess"
+		"minify-css": "css-minify -d assets/css -o assets/css"
 	},
 	"repository": {
 		"type": "git",
@@ -26,10 +25,8 @@
 		"url": "https://github.com/DroidZed/droidzed.github.io/issues"
 	},
 	"homepage": "https://github.com/DroidZed/droidzed.github.io#readme",
-	"dependencies": {},
 	"devDependencies": {
 		"autoprefixer": "^10.4.2",
-		"clean-css": "^5.2.2",
 		"css-minify": "^2.0.0",
 		"postcss": "^8.4.5",
 		"postcss-cli": "^9.1.0",

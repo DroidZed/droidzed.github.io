@@ -26,7 +26,7 @@
 	},
 	"homepage": "https://github.com/DroidZed/droidzed.github.io#readme",
 	"devDependencies": {
-		"autoprefixer": "^10.4.4",
+		"autoprefixer": "^10.4.7",
 		"css-minify": "^2.0.0",
 		"postcss": "^8.4.12",
 		"postcss-cli": "^9.1.0",

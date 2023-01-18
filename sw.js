@@ -10,8 +10,8 @@ self.addEventListener('install', function (e) {
                 'manifest.json',
                 'assets/css/styles.css',
                 'assets/img/forestbridge.jpg',
-                'assets/vendor/pico-css/pico.min.css',
-                'assets/vendor/pico-css/pico.min.css.map',
+                'assets/vendor/pico-css/pico.fluid.classless.min.css',
+                'assets/vendor/pico-css/pico.fluid.classless.min.css.map',
                 'assets/js/app.js',
             ])
         })

@@ -1,10 +1,13 @@
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body,
 html {
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.bgimg {
+.main {
     /* Background image */
     background-image: url('../img/forestbridge.jpg');
     /* Full-screen */
@@ -21,13 +24,6 @@ html {
     font-family: 'Courier New', Courier, monospace;
     /* Set the font-size to 25 pixels */
     font-size: 25px;
-}
-
-/* Position text in the bottom-left corner */
-.bottomleft {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
 }
 
 /* Position text in the middle */

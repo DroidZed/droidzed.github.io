@@ -1,5 +1,5 @@
 // @ts-nocheck
-var CACHE_NAME = 'coming-soon'
+var CACHE_NAME = 'coming-soon-pico'
 
 self.addEventListener('install', function (e) {
     e.waitUntil(

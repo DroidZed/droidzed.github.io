@@ -9,7 +9,7 @@ html {
 
 .main {
     /* Background image */
-    background-image: url('../img/forestbridge.jpg');
+    background-image: url('../../assets/img/forestbridge.jpg');
     /* Full-screen */
     height: 100%;
     /* Center the background image */

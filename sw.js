@@ -1,18 +1,18 @@
 // @ts-nocheck
-var CACHE_NAME = 'coming-soon-pico'
+var CACHE_NAME = 'coming-soon-pico-v3'
 
 self.addEventListener('install', function (e) {
     e.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {
             return cache.addAll([
                 '/',
-                'index.html',
-                'manifest.json',
-                'assets/css/styles.css',
-                'assets/img/forestbridge.jpg',
-                'assets/vendor/pico-css/pico.fluid.classless.min.css',
-                'assets/vendor/pico-css/pico.fluid.classless.min.css.map',
-                'assets/js/app.js',
+                './index.html',
+                './manifest.json',
+                './src/css/styles.css',
+                './assets/img/forestbridge.jpg',
+                './vendor/pico-css/pico.fluid.classless.min.css',
+                './vendor/pico-css/pico.fluid.classless.min.css.map',
+                './src/js/app.js',
             ])
         })
     )
